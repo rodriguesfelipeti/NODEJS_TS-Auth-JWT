@@ -1,0 +1,55 @@
+Separar server em classes.
+
+yarn add sequelize
+yarn add pg -- pg para postgres, mysql2 para mysql2
+yarn add sequelize-cli para cuidar das migrations
+yarn sequelize init
+
+criar pasta database => colocar migrations e seeders
+colocar config e models dentro do src
+
+    Database config =>
+
+        module.exports = {
+        host: '127.0.0.1',
+        username: 'postgres',
+        password: '12345',
+        database: 'postgres',
+        dialect: 'postgres',
+        operatorsAliases: false,
+        logging: false,
+        define: {
+            timestamps: true,
+            underscored: true,
+            underscoredAll: true,
+        },
+        };
+
+    yarn sequelize migration:create --name=create-usersD
+    yarn sequelize db:migrate
+
+
+
+
+JEST TDD - TEST DRIVEN
+yarn add jest -D
+yarn jest --init
+
+teste unitários: Testes de funções Puras! ( nunca usam recursos que podem dar errado, somente recursos da linguagem )
+teste integração: Funções que tem efeitos (api, cadastros, etc...)
+
+utilizar sqlite para testes, criar env, env.test, setar configurações no arquivo config.
+
+para testar rotas, precisa instalar uma biblioteca: yarn add supertest
+
+Encriptador:
+    yarn add bcryptjs
+
+Json webtoken jwt (gera token automatico)  
+    yarn add jsonwebtoken
+
+Criar Factorys (models)
+    yarn add factory-girl
+
+Faker  (gerador de dados)
+    yarn add faker
