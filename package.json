@@ -23,7 +23,7 @@
     "node-env": "^0.1.6",
     "nodemon": "^1.19.1",
     "pg": "^7.11.0",
-    "sequelize": "^5.8.10"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {
     "jest": "^24.8.0",
